@@ -3,13 +3,13 @@ pipeline {
   stages {
 	stage("Git Checkout") {
       steps {
-        git 'https://github.com/Poojitha2022/terraform.git'
+        sh 'git clone https://github.com/Poojitha2022/terraform.git'
       }
 	}
     stage("terraform init") {
       steps {     
 	    sh 'whoami'      
-        sh ‘terraform init’
+            sh (‘terraform init’)
       }
     }
   }
