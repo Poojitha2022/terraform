@@ -12,7 +12,7 @@ pipeline {
     stage('terraform init') {
       steps {     
 	    sh 'whoami'      
-        sh ‘terraform init’
+        sh "terraform init"
       }
     }
   }
