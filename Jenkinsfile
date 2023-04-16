@@ -15,5 +15,17 @@ pipeline {
         sh "terraform init"
       }
     }
+	stage('terraform validate') {
+      steps {     
+	    sh 'whoami'      
+        sh "terraform validate"
+      }
+    }
+	stage('terraform plan') {
+      steps {     
+	    sh 'whoami'      
+        sh "terraform plan"
+      }
+    }
   }
 }
