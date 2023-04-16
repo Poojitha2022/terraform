@@ -193,15 +193,15 @@ resource "kubernetes_deployment" "wp_deploy" {
             }
           env {
             name = "WORDPRESS_DB_DATABASE"
-            value = var.dbname
+            value = google_sql_database.database.name
             }
           env {
             name = "WORDPRESS_DB_USER"
-            value = var.uname
+            value = google_sql_user.users.name
             }
           env {
             name = "WORDPRESS_DB_PASSWORD"
-            value = var.pass
+            value = google_sql_user.users.password
           }
           port {
         container_port = 80
