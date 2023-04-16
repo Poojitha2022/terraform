@@ -145,10 +145,6 @@ depends_on = [
   	}
 }
 
-variable "uname" {}
-variable "pass" {}
-variable "dbname" {}
-
 data "google_client_config" "provider" {}
 
 data "google_container_cluster" "my_cluster" {
