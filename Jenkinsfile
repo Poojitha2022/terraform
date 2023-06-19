@@ -21,7 +21,8 @@ pipeline {
     }
 	stage('terraform plan') {
       steps {     
-	    sh 'whoami'      
+	    sh 'whoami'
+	    sh "az login"
         sh "terraform plan"
       }
     }
